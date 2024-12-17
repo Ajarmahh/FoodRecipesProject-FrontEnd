@@ -12,13 +12,14 @@ function Card(props){
     const status = isFilled ? FilledStar : EmptyStar;
 
     return(
-        <>
-          
-            Title: { props.title} <br></br>
-            Description: { props.text} <br></br>
-            <img onClick={toggle} src={status} width='50px' height='50px'/>
-            
-        </>
+        <div className="card">
+                {props.image}
+                <strong>Title: </strong>{ props.name} <br></br>
+                <strong>Description: </strong>{ props.description} <br></br>
+                <strong>Ingredients: </strong>{props.ingredients} <br></br>
+                <strong>Preparation: </strong>{props.preparation} <br></br>
+                <img className="toggle-star" onClick={toggle} src={status} width='50px' height='50px'/>                                    
+        </div>
     )
 }
 
