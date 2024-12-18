@@ -43,16 +43,84 @@ body{
 }
 
 .nav-bar {
-  position: fixed;
+  position: fixed; /* Keeps it at the top */
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgb(51, 51, 51); /* You can change this to any color */
-  z-index: 1000; /* To make sure the navbar stays on top of other content */
-  padding: 10px;
+  background-color: rgb(51, 51, 51, .8);
+  padding: 10px, 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content:flex;
   align-items: center;
+  z-index: 999;
+  height: auto;
+}
+
+.menu-icon{
+  height:4vh ;
+  width: 4vh;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*margin-left: 14vh;*/
+  width: 100%;
+}
+
+.search-bar input{
+  padding: 8px;
+  font-size: 17px;
+  color: #393939;
+  border-radius: 8px;
+  max-width: 400px; 
+  background-color: rgba(251, 251, 251, 0.8);
+  border: white;
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  gap: 10px; /* Space between the buttons */
+  align-items: flex-start; /* Optional: Align buttons to the left */
+
+}
+
+.list-container {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  gap: 10px; /* Space between the buttons */
+  align-items: flex-start; /* Optional: Align buttons to the left */
+}
+
+.list-container button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(69, 69, 69, .0);
+  color: white;
+  cursor: pointer;
+}
+
+.list-container button:hover {
+  background-color: rgb(85, 85, 85); /* Optional: Hover effect */
+}
+
+.menu-list{
+  position: absolute; /* Drop it below the menu-container */
+  top: 100%; /* Starts directly below the parent container */
+  left: 0; /* Align it to the left */
+  background-color: rgb(68, 68, 68, .5);
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  z-index: 1000; /* Ensure it appears above other content */
+  padding: 20px;
 }
 
 .cards-container {
@@ -61,7 +129,7 @@ body{
   gap: 3vh; 
   justify-content: center; 
   padding: 2vh; 
-  margin: 0 auto; 
+  margin: 15vh; 
 
 }
 
@@ -89,11 +157,6 @@ body{
 
 .about-us{
   background-color: rgba(95, 94, 94, 0.4);
-}
-
-.menu-circle{
-  height:5vh ;
-  width: 5vh;
 }
 
 @media (max-width: 1px) {
