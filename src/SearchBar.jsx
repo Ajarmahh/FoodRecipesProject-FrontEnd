@@ -11,15 +11,15 @@ function SearchBar({onSearch}){
 
 
     return(
-        <div className="search-container">
+      <div className="search-container">
         <div className="search-bar">
-        <input
-          type="text"
-          placeholder="Search..."
-          value={query}
-          onChange={handleSearch}
-        />
-      </div>
+          <input
+            type="text"
+            placeholder="Search..."
+            value={query}
+            onChange={handleSearch}
+          />
+        </div>
       </div>
     )
 }

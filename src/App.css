@@ -5,12 +5,12 @@ body{
   background-position: center;
   background-attachment: fixed;  
   margin: 0; 
-} 
+}
 
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: auto;
   text-align: center;
 }
 
@@ -69,16 +69,23 @@ body{
   align-items: center;
   /*margin-left: 14vh;*/
   width: 100%;
+  padding: 8px;
 }
 
 .search-bar input{
-  padding: 8px;
+  padding: 4px;
   font-size: 17px;
   color: #393939;
   border-radius: 8px;
   max-width: 400px; 
   background-color: rgba(251, 251, 251, 0.8);
   border: white;
+}
+
+
+.search-bar input::placeholder{
+  color: #393939;
+  opacity: 1;
 }
 
 .menu-container {
@@ -133,15 +140,15 @@ body{
 
 }
 
-.card {
-  border-radius: 16px; 
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); 
+.my-card {
+  border-radius: 16px !important; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !important; 
   margin: 16px , 0px; 
-  padding: 16px; 
-  background-color: rgba(95, 94, 94, 0.7); 
-  width: 100%;
-  text-align:left;
-  font-size: 1.2rem;
+  padding: 16px !important; 
+  background-color: rgba(95, 94, 94, 0.7) !important; 
+  width: 100% !important;
+  text-align:left !important;
+  font-size: 1.2rem !important;
 }
 
 .card-image{
@@ -151,17 +158,16 @@ body{
 
 .toggle-star{
   width: 3vh;
-  height: 4vh;
-  margin-right: 100%;
+  height: 3vh;
 }
 
 .about-us{
   background-color: rgba(95, 94, 94, 0.4);
 }
 
-@media (max-width: 1px) {
+@media (max-width: 380px) {
   body {
-    background-size: contain; 
+    background-size: contain !important; 
   }
 }
 
