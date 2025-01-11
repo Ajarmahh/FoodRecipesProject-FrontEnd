@@ -5,7 +5,8 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {colors: {primary: '#000000', secondary: '#ffffff', accent: 'dark:border-gray-700 dark:bg-opacity-70 dark:bg-gray-700 dark:hover:bg-opacity-80 '},
+            fontFamily: {}},
   },
   plugins: [],
 }

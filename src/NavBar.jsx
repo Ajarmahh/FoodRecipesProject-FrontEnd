@@ -1,14 +1,11 @@
 import React, {useState, useRef} from "react";
 import SearchBar from "./SearchBar";
-import WhiteCircle from '../public/images/white_menu_icon.png';
-import BlackCircle from '../public/images/black_menu_icon.png'
+import ReusableButton from "./ReusableButton";
+
 
 function NavBar({sectionRefs, onSearch}){
-    const[isOpen, setIsOpen] = useState(false)
 
-    function toggleMenu(){
-        setIsOpen(prevIsOpen => !prevIsOpen)
-    }
+
 
     function scrollToSection(section) {
         if (sectionRefs.current[section]) {
@@ -16,24 +13,19 @@ function NavBar({sectionRefs, onSearch}){
         }
     }
 
-    const status = isOpen ? BlackCircle : WhiteCircle 
     return(
         <nav className="nav-bar">
-         <div className="menu-container">
-            <img className="menu-icon"  onClick={toggleMenu} src={status} />
-            {isOpen && (
-                <ul className="menu-list">
-                    <div className="list-container">
-                    <li>
-                    <button id="aboutUs-button" onClick={() => scrollToSection("aboutUs")}>About Us</button>                  
-                    </li>
-                    <li>
-                    <button onClick={() => scrollToSection("cards")}>Recipes</button>                  
-                    </li> 
-                    </div>
-                </ul>
-            )}
-            </div>
+            <img src="../public/images/MasterKitchen.png"
+                 className="w-24 h-16" 
+            />
+
+           { /*<p className="font-thin italic">MasterKitchen</p>*/}
+            
+            <div className="inline-block absolute right-0 bg-transparent">
+                <ReusableButton onClick={() => scrollToSection("home")}>Home</ReusableButton> 
+                <ReusableButton onClick={() => scrollToSection("cards")}>Recipes</ReusableButton>                  
+                <ReusableButton onClick={() => scrollToSection("aboutUs")}>About Us</ReusableButton> 
+            </div>                 
             <SearchBar onSearch={onSearch}/>
 
         </nav>

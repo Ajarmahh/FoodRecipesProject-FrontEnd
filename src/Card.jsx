@@ -7,7 +7,8 @@ function Card(props){
     const[cardIsOpen, SetCardIsOpen] = useState(false)
     const[isFilled, setIsFilled] = useState(true);
     
-    function toggle(){
+    function toggle(event){
+        event.stopPropagation() // Prevent event from reaching the parent card
         setIsFilled(!isFilled)
     };
 
@@ -22,9 +23,9 @@ function Card(props){
             href="#" 
             className={`${
               cardIsOpen ? 
-                'flex flex-col items-center bg-white border border-gray-200 rounded-2xl shadow md:flex-row md:max-w-5xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 transition-all duration-500'
-                : 'flex flex-col items-center bg-white border border-gray-200 rounded-2xl shadow md:flex-row md:max-w-lg hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 transition-all duration-300'
-            }relative`}      
+               'z-40 flex flex-col items-center bg-white border border-gray-200 rounded-2xl shadow md:flex-row md:max-w-5xl hover:bg-opacity-50 dark:border-gray-700 dark:bg-opacity-70 dark:bg-gray-700 dark:hover:bg-opacity-80 transition-all duration-500 cursor-pointer '
+               : 'z-40 flex flex-col items-center bg-white border border-gray-200 rounded-2xl shadow md:flex-row md:max-w-lg hover:bg-opacity-50 dark:border-gray-700 dark:bg-opacity-70 dark:bg-gray-700 dark:hover:bg-opacity-80 transition-all duration-300 cursor-pointer '
+            }relative m-8 `}      
             onClick={toggleCard}
             
         >  
@@ -53,7 +54,8 @@ function Card(props){
 
                 <button
                     onClick={() => props.onDelete()}
-                    className=" bottom-4 right-4 bg-red-600 hover:bg-red-700 text-white p-2 rounded-full shadow-lg focus:outline-none"
+                    className=" bottom-4 right-4 bg-red-600 hover:bg-red-700 text-white p-2 rounded-full shadow-lg focus:outline-none "
+                    style={{position: "absolute", bottom:16, right: 6}}
                     >
                     Delete
                 </button>
@@ -73,10 +75,10 @@ function Card(props){
                 width="50px" 
                 height="50px" 
                 alt="Toggle Star"
+                style={{position: "absolute", top: 10 , right: 10}}
             />
 
-          </div>
-         
+          </div>  
         </div>
     );
     

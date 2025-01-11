@@ -1,17 +1,21 @@
 import { useState, useEffect, useRef} from "react"
 import NavBar from './NavBar'
+import Home from "./Home"
 import './App.css'
 import Card from "./Card"
 import AboutUs from "./AbouUs"
 import Form from"./Form"
 import MyChatBot from "./MyChatbot"
+import { Link } from "react-router-dom"
 
 function App() {
   const[cards, setCards] = useState([]);
 
   const sectionRefs = useRef({
     aboutUs: null,
-    cards: null,});
+    cards: null,
+    home: null
+    });
 
   const [filteredCards, setFilteredCards] = useState([]);
 
@@ -126,10 +130,16 @@ function App() {
   
   return (
     <div>
-        <NavBar sectionRefs={sectionRefs} onSearch={handleSearch} />  
+        <NavBar sectionRefs={sectionRefs} onSearch={handleSearch} />   
+        <section
+          ref={(el) => (sectionRefs.current.home = el)}>
+          <Home />
+        </section>
+        <div className="relative bg-white bg-opacity-90 pb-10 ">
+
         <Form newRecipe={newRecipe} handleForm={handleForm} onSubmit={handleSubmit}/>
             <section ref={(el) => (sectionRefs.current.cards = el)}>
-              <div className="cards-container">
+              <div className="justify-center justify-items-center">
                 {filteredCards.length === 0 ? null :     
                   filteredCards.map((card) => (
                   <Card 
@@ -144,13 +154,14 @@ function App() {
                 ))
               }
               </div>
-            </section> 
-      
-            <section
-                    ref={(el) => (sectionRefs.current.aboutUs = el)}>
-                    <AboutUs />
             </section>
+            </div> 
         <MyChatBot />
+        <section
+          ref={(el) => (sectionRefs.current.aboutUs = el)}>
+          <AboutUs />
+          <Link className="contact-link" to='/contact-us'>Get In Touch</Link>
+        </section>
     </div>    
   )
 }

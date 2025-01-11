@@ -1,46 +1,22 @@
 body{
-  background-image: url("https://www.southernliving.com/thmb/TiGXc2JsEJpsioS_TA-LDzRFPEc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/27531_ST_TENDERLOINS_13-7442687e434e4c4c95609ff0262773a2.jpg");
+  background-image: url("../public/images/background/background.jpg");
   background-size: cover; 
   background-repeat: no-repeat; 
-  background-position: center;
-  background-attachment: fixed;  
+  background-position: cover;
+  background-attachment: fixed;
   margin: 0; 
 }
 
+
+
 #root {
-  max-width: 1280px;
+  /*max-width: 1280px;*/
   margin: 0 auto;
   padding: auto;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
 
 .nav-bar {
   position: fixed; /* Keeps it at the top */
@@ -130,6 +106,25 @@ body{
   padding: 20px;
 }
 
+.slider-container{
+  width: 100%; /* Set to 100% for responsiveness */
+  max-width: 1200px; /* Optional: limit maximum width */
+  margin-top: 60px;
+}
+
+.slider-container .slick-slide {
+  display: flex; /* Enable flexbox */
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+}
+
+.slider-container .slick-slide img {
+  max-width: 100%; /* Prevents overflow */
+  max-height: 100%; /* Prevents overflow */
+  object-fit: contain; /* Ensures the image fits within the container */
+  margin: 0 auto;
+}
+
 .cards-container {
   display: flex;
   flex-wrap: wrap; 
@@ -137,18 +132,22 @@ body{
   justify-content: center; 
   padding: 2vh; 
   margin: 15vh; 
+}
 
+.dir{
+  position: relative !important;
+  
 }
 
 .my-card {
-  border-radius: 16px !important; 
+  border-radius: 16px ; 
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !important; 
   margin: 16px , 0px; 
-  padding: 16px !important; 
+  padding: 16px ; 
   background-color: rgba(95, 94, 94, 0.7) !important; 
-  width: 100% !important;
-  text-align:left !important;
-  font-size: 1.2rem !important;
+  width: 100% ;
+  text-align:left ;
+  font-size: 1.2rem 
 }
 
 .card-image{
@@ -165,6 +164,14 @@ body{
   background-color: rgba(95, 94, 94, 0.4);
 }
 
+.contact-link{
+  display: flow;
+  font-size:xx-large;
+  border: 1px solid #888;
+  border-radius: 1rem;
+  padding: .7vh;
+  margin: 3vh;
+}
 @media (max-width: 380px) {
   body {
     background-size: contain !important; 
