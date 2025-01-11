@@ -86,7 +86,7 @@ function ContactUs() {
             </p>
             <p className="text-sm text-gray-500 dark:text-gray-400">
                 <a href="#" className="hover:underline">
-                    +49 163 xxx xxx
+                    +49 163 xxx xxxx
                 </a>
             </p>
 

@@ -5,7 +5,7 @@ import './App.css'
 import Card from "./Card"
 import AboutUs from "./AbouUs"
 import Form from"./Form"
-import MyChatBot from "./MyChatbot"
+import MyChatBot from "./MyChatBot"
 import { Link } from "react-router-dom"
 
 function App() {
