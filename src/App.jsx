@@ -41,7 +41,7 @@ function App() {
 
   
   useEffect(()=> {
-    async function callCArds(){ const response = await fetch("http://127.0.0.1:4000/")
+    async function callCArds(){ const response = await fetch('https://foodrecipesproject-backend.onrender.com')
     const data = await response.json()
     setCards(data)
     setFilteredCards(data)
@@ -67,7 +67,7 @@ function App() {
   
     async function submitRecipe() {
       try {
-        const API_URL = "http://127.0.0.1:4000/add_recipe";
+        const API_URL = "https://foodrecipesproject-backend.onrender.com/add_recipe";
   
         const response = await fetch(API_URL, {
           method: "POST",
@@ -113,7 +113,7 @@ function App() {
       console.log("Deleting recipe with id:", id);  
   
       // Send DELETE request with id
-      const response = await fetch(`http://127.0.0.1:4000/delete_recipe/${id}`, {
+      const response = await fetch(`https://foodrecipesproject-backend.onrender.com/delete_recipe/${id}`, {
         method: 'DELETE',
       });
   
