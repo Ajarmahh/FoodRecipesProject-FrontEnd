@@ -1,6 +1,7 @@
 import React, {useState, useRef} from "react";
 import SearchBar from "./SearchBar";
 import ReusableButton from "./ReusableButton";
+import mainIcon from "./assets/MasterKitchen.png"
 
 
 function NavBar({sectionRefs, onSearch}){
@@ -15,7 +16,7 @@ function NavBar({sectionRefs, onSearch}){
 
     return(
         <nav className="nav-bar">
-            <img src="../public/images/MasterKitchen.png"
+            <img src={mainIcon}
                  className="w-24 h-16" 
             />
 

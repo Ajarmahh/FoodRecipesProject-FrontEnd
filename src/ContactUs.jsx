@@ -1,4 +1,6 @@
 import { useNavigate } from "react-router-dom";
+import avatar from "./assets/avatar.jpg"
+
 
 function ContactUs() {
     const navigate = useNavigate()
@@ -96,7 +98,7 @@ function ContactUs() {
        <div className="block m-11 gap-9 size-1/2 ml-80">
         <div className="mb-6 items-center bg-gray-50 bg-opacity-100 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
             <a href="#">
-                <img className="min-w-full rounded-lg sm:rounded-none sm:rounded-l-lg" src="../public/images/avatar.jpg" alt="Abdallah Avatar"/>
+                <img className="min-w-full rounded-lg sm:rounded-none sm:rounded-l-lg" src={avatar} alt="Abdallah Avatar"/>
             </a>
             <div className="p-5 px-16">
                 <h3 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
