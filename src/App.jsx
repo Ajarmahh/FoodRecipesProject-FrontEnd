@@ -70,7 +70,7 @@ function App() {
         const API_URL = "https://foodrecipesproject-backend.onrender.com/add_recipe";
   
         const response = await fetch(API_URL, {
-          method: "POST",
+          method: "GET",
           headers: {
             "Content-Type": "application/json",
           },
