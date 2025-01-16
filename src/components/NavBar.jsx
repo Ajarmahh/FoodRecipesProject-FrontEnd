@@ -1,7 +1,7 @@
 import React, {useState, useRef} from "react";
 import SearchBar from "./SearchBar";
 import ReusableButton from "./ReusableButton";
-import mainIcon from "./assets/MasterKitchen.png"
+import mainIcon from "../assets/MasterKitchen.png"
 
 
 function NavBar({sectionRefs, onSearch}){

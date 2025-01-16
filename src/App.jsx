@@ -1,12 +1,7 @@
 import { useState, useEffect, useRef} from "react"
-import NavBar from './NavBar'
-import Home from "./Home"
 import './App.css'
-import Card from "./Card"
-import AboutUs from "./AbouUs"
-import Form from"./Form"
-import MyChatBot from "./MyChatBot"
 import { Link } from "react-router-dom"
+import { AboutUs, Card, Home, Form, MyChatBot, NavBar} from "./components"
 
 function App() {
   const[cards, setCards] = useState([]);
@@ -41,7 +36,7 @@ function App() {
 
   
   useEffect(()=> {
-    async function callCArds(){ const response = await fetch('https://foodrecipesproject-backend.onrender.com')
+    async function callCArds(){ const response = await fetch('http://127.0.0.1:4000')
     const data = await response.json()
     setCards(data)
     setFilteredCards(data)
@@ -67,10 +62,10 @@ function App() {
   
     async function submitRecipe() {
       try {
-        const API_URL = "https://foodrecipesproject-backend.onrender.com/add_recipe";
+        const API_URL = "http://127.0.0.1:4000/add_recipe";
   
         const response = await fetch(API_URL, {
-          method: "GET",
+          method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
@@ -109,11 +104,9 @@ function App() {
   }
 
   const handleDelete = async (id) => {
-    try {
-      console.log("Deleting recipe with id:", id);  
-  
+    try {  
       // Send DELETE request with id
-      const response = await fetch(`https://foodrecipesproject-backend.onrender.com/delete_recipe/${id}`, {
+      const response = await fetch(`http://127.0.0.1:4000/delete_recipe/${id}`, {
         method: 'DELETE',
       });
   
@@ -122,7 +115,6 @@ function App() {
       }
   
       setFilteredCards(filteredCards.filter((card) => card.id !== id));
-      console.log('Recipe deleted successfully');
     } catch (error) {
       console.error('Error occurred:', error);
     }

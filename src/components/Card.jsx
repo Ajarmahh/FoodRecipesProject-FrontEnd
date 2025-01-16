@@ -1,6 +1,6 @@
 import { useState } from "react"
-import FilledStar from "../public/images/filled-star.png"
-import EmptyStar from "../public/images/star.png"
+import FilledStar from "../../public/images/filled-star.png"
+import EmptyStar from "../../public/images/star.png"
 
 
 function Card(props){

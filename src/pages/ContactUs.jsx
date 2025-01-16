@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import avatar from "./assets/avatar.jpg"
+import avatar from "../assets/avatar.jpg"
 
 
 function ContactUs() {
