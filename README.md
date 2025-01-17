@@ -1,5 +1,4 @@
 FoodRecipesProject-FrontEnd (MasterKitchen)
-Live Demo
 
 📖 Project Description
 FoodRecipesProject-FrontEnd (MasterKitchen) is a web application designed to make cooking simpler and more enjoyable. Whether you're a busy professional or someone struggling with cooking, this app helps you find, manage, and learn about recipes effortlessly. With features like recipe search, favorites, recipe management, and an AI chatbot, the app is your personal kitchen assistant.
