@@ -14,10 +14,6 @@ function App() {
 
   const [filteredCards, setFilteredCards] = useState([]);
 
-  /*function handleCards(){
-    setCards(cards.map(card => console.log(cards))
-  )}*/
-
   const[newRecipe, setNewRecipe] = useState({
     name: "",
     description: "",

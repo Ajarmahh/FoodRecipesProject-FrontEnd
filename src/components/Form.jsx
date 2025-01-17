@@ -7,13 +7,6 @@ function Form({ newRecipe, handleForm, toggle, onSubmit}) {
         setFormIsOpen(prevFormIsOpen=> !prevFormIsOpen)
     }
 
-  { /* function handleSubmit(){
-        onSubmit({name, description,
-        ingredients,
-        prepare, 
-        image})
-    }
-*/}
     return (
       <div className="p-20">
         {/* Button to toggle modal */}

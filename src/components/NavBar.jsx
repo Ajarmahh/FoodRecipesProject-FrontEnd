@@ -19,8 +19,6 @@ function NavBar({sectionRefs, onSearch}){
             <img src={mainIcon}
                  className="w-24 h-16" 
             />
-
-           { /*<p className="font-thin italic">MasterKitchen</p>*/}
             
             <div className="inline-block absolute right-0 bg-transparent">
                 <ReusableButton onClick={() => scrollToSection("home")}>Home</ReusableButton> 

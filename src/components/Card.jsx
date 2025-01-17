@@ -5,7 +5,7 @@ import EmptyStar from "../../public/images/star.png"
 
 function Card(props){
     const[cardIsOpen, SetCardIsOpen] = useState(false)
-    const[isFilled, setIsFilled] = useState(true);
+    const[isFilled, setIsFilled] = useState(false);
     
     function toggle(event){
         event.stopPropagation() // Prevent event from reaching the parent card
@@ -61,10 +61,10 @@ function Card(props){
                 </button>
 
                 {cardIsOpen && (
-                    <>
+                    <div className="m-3">
                     <strong>Preparation:</strong>{' '}
-                    {props.preparation} <br />
-                    </>
+                    {props.prepare} <br />
+                    </div>
                 )}                    
             </div>
 
