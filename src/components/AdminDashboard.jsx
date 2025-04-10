@@ -8,7 +8,7 @@ function AdminDashboard() {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await fetch("http://127.0.0.1:4000/admin/users", {
+        const response = await fetch("https://foodrecipesproject-backend.onrender.com/admin/users", {
           headers: { Authorization: `Bearer ${token}` },
         });
 
@@ -28,7 +28,7 @@ function AdminDashboard() {
 
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`http://127.0.0.1:4000/admin/users/${id}`, {
+      const response = await fetch(`https://foodrecipesproject-backend.onrender.com/admin/users/${id}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
       });
@@ -45,7 +45,7 @@ function AdminDashboard() {
 
   const handleMakeAdmin = async (id) => {
     try {
-      const response = await fetch(`http://127.0.0.1:4000/admin/users/${id}/make_admin`, {
+      const response = await fetch(`https://foodrecipesproject-backend.onrender.com/admin/users/${id}/make_admin`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
